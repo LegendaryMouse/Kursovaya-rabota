@@ -18,6 +18,9 @@
     </nav>
     <main>
         <p class="error"> </p>
+        <?php
+         $login = strip_tags($_GET['login'] ?? "");
+         ?>
         <form>
             <label>
                 Логин
@@ -25,10 +28,11 @@
             </label>
             <label>
                 Пароль
-                <input type="password" name="password">
+                <input type="password" required name="password">
             </label>
             <button>Войти</button>
         </form>
     </main>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
